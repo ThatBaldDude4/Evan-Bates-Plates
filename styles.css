@@ -44,7 +44,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr;
-    
+    z-index: 10;
 }
 
 #about-me > nav > img {
@@ -131,6 +131,32 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.selling-point-list .car-logo::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url('IMAGES/car-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.selling-point-list .wheel-logo::before {
+    content: "";
+    position: absolute;
+    left: 80px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    background-image: url('IMAGES/steering-wheel-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 #how-it-works > ul > li > p {
