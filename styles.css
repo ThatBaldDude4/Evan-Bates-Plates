@@ -24,14 +24,16 @@ body {
 .section {
     width: 100%;
     min-height: 100vh;
-}
-/* defines the sizing of each element with a class of section */
-
-#about-me {
-    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+/* defines the sizing of each element with a class of section
+   Also sets each section to be a flex container.
+*/
+
+#about-me {
+    padding-top: 4rem;
 }
 
 #about-me > nav {
@@ -103,12 +105,9 @@ h2 {
         3px 3px 4px gray;
 }
 
-#how-itworks {
-    display: flex;
-}
 
 .selling-point-list {
-    flex: 1;
+    flex: 1; /* This make the list fill up the whole parent element.*/
     border: 1px solid red;
     list-style: none;
 }
@@ -163,4 +162,19 @@ h2 {
     font-size: 1rem;
     text-align: left;
     padding: 10px 10px 0 10px;
+}
+
+.scrolling-images {
+    max-width: 90%;
+    border: 1px solid red;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: auto;
+    scroll-snap-type: x mandatory;
+    
+}
+
+.scrolling-images img {
+    max-width: 100%;
+    scroll-snap-align: center;
 }
