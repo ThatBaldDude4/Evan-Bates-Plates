@@ -1,0 +1,140 @@
+:root {
+    --main-bg-color: #e9e9e9;
+    --nav-bar-color: #2C2C2C;
+    --font-color: rgb(12, 12, 12);
+    --nav-bar-text: #fff;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--font-color);
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    padding: 0 10px 0 10px;
+    max-width: 100vw;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+}
+/* defines the sizing of each element with a class of section */
+
+#about-me {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-me > nav {
+    width: 100vw;
+    min-height: 4rem;
+    background-color: var(--nav-bar-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    
+}
+
+#about-me > nav > img {
+    grid-column: 1;
+}
+
+.nav-button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#about-me > nav > div > a {
+    color: var(--nav-bar-text);
+    text-decoration: none;
+    
+    grid-column: 2;
+    max-width: 100px;
+    height: 75%;
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-shadow: 2px 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-me > nav > div > a:active {
+    background-color: #8f8e8e15;
+    color: var(--font-color);
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 3.5rem;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+#about-me p {
+    font-size: 1.2rem;
+    margin: 40px 10px 0px 10px;
+}
+
+#about-me > img {
+    aspect-ratio: 16 / 9;
+    max-height: 200px;
+    border-radius: 20px;
+    margin: 20px 0 40px 0;
+    box-shadow: 
+        -4px -4px 10px rgba(255, 255, 255, 0.6),
+        3px 3px 4px gray;
+}
+
+#how-itworks {
+    display: flex;
+}
+
+.selling-point-list {
+    flex: 1;
+    border: 1px solid red;
+    list-style: none;
+}
+
+#how-it-works > ul > li {
+    font-size: 1.5rem;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.selling-point-list .person-logo::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url('IMAGES/Person-logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#how-it-works > ul > li > p {
+    font-size: 1rem;
+    text-align: left;
+    padding: 10px 10px 0 10px;
+}
