@@ -59,10 +59,9 @@ body {
     align-items: center;
 }
 
-#about-me > nav > div > a {
+nav > div > a {
     color: var(--nav-bar-text);
     text-decoration: none;
-    
     grid-column: 2;
     max-width: 100px;
     height: 75%;
@@ -199,6 +198,7 @@ h2 {
         transform: translate(0px, 0px);
     }
 }
+
 /* Anything past here is for the reviews page */
 
 .reviews-heading {
